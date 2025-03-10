@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/script.js' defer></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  </head>
+
+  <body>
+    <div class="app">
+      <div id="title-wrap">
+        <span id="score">0</span><h1><%= title %></h1><span id="countdown">360</span>
+      </div>
+      <div class="quiz">
+        <h2 id="question">Question Goes Here</h2>
+        <div id="question2-box">
+          <pre><code id="question2" class="language-bash">console.log("Hello, World!");</code></pre>
+        </div>
+        <div id="answer-buttons">
+          <button class="btn">Answer1</button>
+          <button class="btn">Answer2</button>
+          <button class="btn">Answer3</button>
+          <button class="btn">Answer4</button>
+        </div>
+        <input id="usr-name" type="hidden" value="<%= name %>" />
+        <button id="next-btn" name="next-btn">Next</button>
+        <button id="warp-btn" name="board-btn">Save & Show Ranking</button>
+      </div>
+    </div>
+  </body>
+</html>
