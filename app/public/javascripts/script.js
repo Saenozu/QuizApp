@@ -23,106 +23,6 @@ const questions = [
       ],
     },
     {
-      //2
-      question:
-        "레지스터, 메모리 및 코드가 다음과 같다. Code를 1까지 실행했을 때, eax에 저장된 값은?",
-      question2:
-        "[Register]\n\
-  ebx = 0x5655620a\n\
-  ========================\n\
-  [Memory]\n\
-  0x56556200 -> 0x00002025\n\
-  0x56556208 -> 0xB055BEBE\n\
-  0x56556210 -> 0x00C0FFEE\n\
-  0x56556218 -> 0x12345678\n\
-  ========================\n\
-  [Code]\n\
-  mov 0x8(%ebx),%eax\n\
-  lea 0x8(%ebx),%eax",
-      answers: [
-        { text: "0xB055BEBE", correct: true },
-        { text: "0x00002025", correct: false },
-        { text: "0x12345678", correct: false },
-        { text: "0x00C0FFEE", correct: false },
-      ],
-    },
-    {
-      //3
-      question:
-        "레지스터, 메모리 및 코드가 다음과 같다. Code를 2까지 실행했을 때, eax에 저장된 값은?",
-      question2:
-        "[Register]\n\
-  ebx = 0x5655620a\n\
-  ========================\n\
-  [Memory]\n\
-  0x56556200 -> 0x00002025\n\
-  0x56556208 -> 0xB055BEBE\n\
-  0x56556210 -> 0x00C0FFEE\n\
-  0x56556218 -> 0x12345678\n\
-  ========================\n\
-  [Code]\n\
-  mov 0x8(%ebx),%eax\n\
-  lea 0x8(%ebx),%eax",
-      answers: [
-        { text: "0x56556200", correct: true },
-        { text: "0x56556208", correct: false },
-        { text: "0x56556210", correct: false },
-        { text: "0x56556218", correct: false },
-      ],
-    },
-    {
-      //4
-      question:
-        "레지스터, 메모리 및 코드가 다음과 같다. Code를 1까지 실행했을 때, eax에 저장된 값은?",
-      question2:
-        "[Register]\n\
-  eax = 0x31337\n\
-  ebp = 0x56556218\n\
-  ecx = 0x1\n\
-  ========================\n\
-  [Memory]\n\
-  0x56556200 -> 0x00002025\n\
-  0x56556208 -> 0x00031340\n\
-  0x56556210 -> 0x000007e9\n\
-  0x56556218 -> 0x00000001\n\
-  ========================\n\
-  [Code]\n\
-  mov -0x8(%ebp,%ecx,4),%eax\n\
-  add $0x2,%ecx\n\
-  mov -0x8(%ebp,%ecx,4),%eax\n\
-  lea 0x8(%ebx),%eax",
-      answers: [
-        { text: "0xB055BEBE", correct: false },
-        { text: "0x00002025", correct: false },
-        { text: "0x12345678", correct: false },
-        { text: "0x00C0FFEE", correct: true },
-      ],
-    },
-    {
-      //5
-      question:
-        "레지스터, 메모리 및 코드가 다음과 같다. Code를 2까지 실행했을 때, eax에 저장된 값은?",
-      question2:
-        "[Register] \n\
-  ebx = 0x5655620a \n\
-  ======================== \n\
-  [Memory] \n\
-  0x56556200 -> 0x00002025 \n\
-  0x56556208 -> 0xB055BEBE \n\
-  0x56556210 -> 0x00C0FFEE \n\
-  0x56556218 -> 0x12345678 \n\
-  ======================== \n\
-  [Code] \n\
-  mov 0x8(%ebx),%eax \n\
-  lea 0x8(%ebx),%eax",
-      answers: [
-        { text: "0x56556200", correct: true },
-        { text: "0x56556208", correct: false },
-        { text: "0x56556210", correct: false },
-        { text: "0x56556218", correct: false },
-      ],
-    },
-    {
       //6
       question: "rax=0x1234567890abcdef 일 때, ax는?",
       question2: "",
@@ -226,27 +126,6 @@ const questions = [
         { text: "0xCAFE99BE", correct: false },
         { text: "0xCA99BABE", correct: false },
         { text: "0x99FEBABE", correct: false },
-      ],
-    },
-    {
-      //15
-      question:
-        "메모리와 레지스터는 다음과 같다. eax에 저장되는 값이 다른 코드는?",
-      question2:
-        "[Register] \n\
-  ebx = 0x5655620a \n\
-  ======================== \n\
-  [Memory] \n\
-  0x56556200 -> 0x00002025 \n\
-  0x56556208 -> 0xB055BEBE \n\
-  0x56556210 -> 0x99C0FFEE \n\
-  0x56556218 -> 0x12345678 \n\
-  ========================",
-      answers: [
-        { text: "mov 0x8(%ebx), %eax", correct: true },
-        { text: "mov 0x16(%ebx),%eax", correct: false },
-        { text: "mov $0x99C0FFEE, %eax", correct: false },
-        { text: "mov 0x56556210", correct: false },
       ],
     },
     {
@@ -415,9 +294,7 @@ const questions = [
         { text: "지역변수와 매개변수가 저장되는 영역이다.", correct: false },
         { text: "높은 주소에서 낮은 주소의 방향으로 할당된다.", correct: false },
         {
-          text: "함수의 호출과 함께 할당되며 호출이 완료되면 소멸한다.",
-          correct: false,
-        },
+          text: "함수의 호출과 함께 할당되며 호출이 완료되면 소멸한다.", correct: false },
       ],
     },
     {
@@ -428,8 +305,7 @@ const questions = [
         { text: "높은 주소에서 낮은 주소의 방향으로 할당된다.", correct: true },
         { text: "먼저 들어온 데이터를 먼저 처리한다.", correct: false },
         {
-          text: "사용자에 의해 메모리 공간이 동적으로 할당되고 해제된다.",
-          correct: false,
+          text: "사용자에 의해 메모리 공간이 동적으로 할당되고 해제된다.", correct: false,
         },
         { text: "메모리 크기 제한이 없다.", correct: false },
       ],
@@ -441,8 +317,8 @@ const questions = [
       answers: [
         { text: "전처리 - 컴파일 - 어셈블리 - 링커", correct: true },
         { text: "전처리 - 어셈블리 - 링커 - 컴파일", correct: false },
-        { text: "전처리 - 링커 - 컴파일 - 어셈블리리", correct: false },
-        { text: "전처리 - 컴파일 - 링커 - 어셈블리리", correct: false },
+        { text: "전처리 - 링커 - 컴파일 - 어셈블리", correct: false },
+        { text: "전처리 - 컴파일 - 링커 - 어셈블리", correct: false },
       ],
     },
     {
@@ -481,6 +357,58 @@ const questions = [
         { text: "A: %eip, B: %esp", correct: false },
       ],
     },
+    {
+      question: "다음 어셈블리 코드 실행 후 eax의 값으로 옳은 것은?",
+      question2: "movl $10, %eax\n\
+  addl $5, %eax\n\
+  subl $3, %eax",
+      answers: [
+        { text: "2", correct: true },
+        { text: "3", correct: false },
+        { text: "5", correct: false },
+        { text: "10", correct: false },
+      ],
+    },{
+      question: "레지스터, 메모리와 코드가 다음과 같다. 1번 코드까지 실행했을 때 eax에 저장된 값은?",
+      question2: "[Register]\n\
+  ebx = 0x4e8a40\n\
+  ========================\n\
+  [Memory]\n\
+  0x4e8a40 | 0xDEADBEEF\n\
+  0x4e8a48 | 0xC0FFEE12\n\
+  0x4e8a50 | 0xBEA7C0DE\n\
+  0x4b4a58 | 0xC0DEB00K\n\
+  ========================\n\
+  [Code]\n\
+  1: mov (%ebx), %eax\n\
+  2: lea 8(%ebx), %eax",
+      answers: [
+        { text: "0xC0FFEE12", correct: true },
+        { text: "0x4e8a48", correct: false },
+        { text: "0x4e8a50", correct: false },
+        { text: "0xDEADBEEF", correct: false },
+      ],
+    },{
+      question: "레지스터, 메모리와 코드가 다음과 같다. 2번 코드까지 실행했을 때 eax에 저장된 값은?",
+      question2: "[Register]\n\
+  ebx = 0x4e8a40\n\
+  ========================\n\
+  [Memory]\n\
+  0x4e8a40 | 0xDEADBEEF\n\
+  0x4e8a48 | 0xC0FFEE12\n\
+  0x4e8a50 | 0xBEA7C0DE\n\
+  0x4b4a58 | 0xC0DEB00K\n\
+  ========================\n\
+  [Code]\n\
+  1: mov 8(%ebx), %eax\n\
+  2: lea 8(%ebx), %eax",
+      answers: [
+        { text: "0x4e8a48", correct: true },
+        { text: "0xC0FFEE12", correct: false },
+        { text: "0x4b4a58", correct: false },
+        { text: "0xC0DEB00K", correct: false },
+      ],
+    }
   ];
   
   function shuffle(array) {
@@ -523,6 +451,7 @@ const questions = [
     score = 0;
     scoreElement.innerHTML = score;
     nextButton.innerHTML = "Next";
+    countdown();
     showQuestion();
   }
   
@@ -616,5 +545,5 @@ const questions = [
     location.href = `/saveScore?name=${usr_name}&score=${score}&countdown=${timeLeft}`;
   }
 
-  countdown();
+
   startQuiz();

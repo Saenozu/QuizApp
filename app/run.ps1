@@ -1,5 +1,5 @@
-docker rm -f test
-docker rmi -f test
-docker build -t test .
-docker run --name=test --rm -p 18703:3000 -it test
+docker rm -f quiz_app
+docker rmi -f quiz_app
+docker build -t quiz_app .
+docker run -d --name=quiz_app --rm -p 18703:3000 -it quiz_app
 echo "Done!"
