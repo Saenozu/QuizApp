@@ -69,30 +69,6 @@ const questions = [
       ],
     },
     {
-      //10
-      question:
-        "ecx=0xCAFEBABE 일 때, ch를 0x00으로 바꾸었을 때 ecx의 값으로 옳은 것은?",
-      question2: "",
-      answers: [
-        { text: "0xCAFE00BE", correct: true },
-        { text: "0xCAFEBA00", correct: false },
-        { text: "0xCA00BABE", correct: false },
-        { text: "0x00FEBABE", correct: false },
-      ],
-    },
-    {
-      //11
-      question:
-        "ebx=0xB0551234 일 때, bx를 0xABCD으로 바꾸었을 때 bl의 값으로 옳은 것은?",
-      question2: "",
-      answers: [
-        { text: "0xCD", correct: true },
-        { text: "0xAB", correct: false },
-        { text: "0x12", correct: false },
-        { text: "0x34", correct: false },
-      ],
-    },
-    {
       //12
       question:
         "eax=0xC0FFEE01 일 때, al를 0x16으로 바꾸었을 때 ax의 값으로 옳은 것은?",
@@ -102,30 +78,6 @@ const questions = [
         { text: "0x1601", correct: false },
         { text: "0xC0FF", correct: false },
         { text: "0xC016", correct: false },
-      ],
-    },
-    {
-      //13
-      question:
-        "ebx=0xB0551234 일 때, bh를 0xBA으로 바꾸었을 때 ebx의 값으로 옳은 것은?",
-      question2: "",
-      answers: [
-        { text: "0xB055BA34", correct: true },
-        { text: "0xB05512BA", correct: false },
-        { text: "0xB0BA1234", correct: false },
-        { text: "0xBA551234", correct: false },
-      ],
-    },
-    {
-      //14
-      question:
-        "ecx=0xCAFEBABE 일 때, cl를 0x99으로 바꾸었을 때 ecx의 값으로 옳은 것은?",
-      question2: "",
-      answers: [
-        { text: "0xCAFEBA99", correct: true },
-        { text: "0xCAFE99BE", correct: false },
-        { text: "0xCA99BABE", correct: false },
-        { text: "0x99FEBABE", correct: false },
       ],
     },
     {
@@ -293,8 +245,7 @@ const questions = [
         { text: "먼저 들어온 데이터를 먼저 처리한다.", correct: true },
         { text: "지역변수와 매개변수가 저장되는 영역이다.", correct: false },
         { text: "높은 주소에서 낮은 주소의 방향으로 할당된다.", correct: false },
-        {
-          text: "함수의 호출과 함께 할당되며 호출이 완료되면 소멸한다.", correct: false },
+        { text: "함수의 호출과 함께 할당되며 호출이 완료되면 소멸한다.", correct: false },
       ],
     },
     {
@@ -305,8 +256,7 @@ const questions = [
         { text: "높은 주소에서 낮은 주소의 방향으로 할당된다.", correct: true },
         { text: "먼저 들어온 데이터를 먼저 처리한다.", correct: false },
         {
-          text: "사용자에 의해 메모리 공간이 동적으로 할당되고 해제된다.", correct: false,
-        },
+          text: "사용자에 의해 메모리 공간이 동적으로 할당되고 해제된다.", correct: false },
         { text: "메모리 크기 제한이 없다.", correct: false },
       ],
     },
