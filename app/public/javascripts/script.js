@@ -131,7 +131,7 @@ const questions = [
       //20
       question: "다음 코드의 변수 a가 저장되는 곳은?",
       question2:
-        '#include \<stdio.h\>\n\n\
+        '#include &lt;stdio.h&gt;\n\n\
   int a;\n\
   char b[] = "CAT-Security";\n\n\
   int main()\n\
@@ -153,7 +153,7 @@ const questions = [
       //21
       question: '다음 코드의 "CAT-Security"가 저장되는 곳은?',
       question2:
-        '#include \<stdio.h\>\n\n\
+        '#include &lt;stdio.h&gt;\n\n\
   int a;\n\
   char b[] = "CAT-Security";\n\n\
   int main()\n\
@@ -175,7 +175,7 @@ const questions = [
       //22
       question: "다음 코드의 변수 c가 저장되는 곳은?",
       question2:
-        '#include \<stdio.h\>\n\n\
+        '#include &lt;stdio.h&gt;\n\n\
   int a;\n\
   char b[] = "CAT-Security";\n\n\
   int main()\n\
@@ -197,7 +197,7 @@ const questions = [
       //23
       question: "다음 코드의 변수 b가 저장되는 곳은?",
       question2:
-        '#include \<stdio.h\>\n\n\
+        '#include &lt;stdio.h&gt;\n\n\
   int a;\n\
   char b[] = "CAT-Security";\n\n\
   int main()\n\
@@ -219,7 +219,7 @@ const questions = [
       //24
       question: "다음 코드의 변수 d가 저장되는 곳은?",
       question2:
-        '#include \<stdio.h\>\n\n\
+        '#include &lt;stdio.h&gt;\n\n\
   int a;\n\
   char b[] = "CAT-Security";\n\n\
   int main()\n\
@@ -310,8 +310,8 @@ const questions = [
     {
       question: "다음 어셈블리 코드 실행 후 eax의 값으로 옳은 것은?",
       question2: "movl $10, %eax\n\
-  addl $5, %eax\n\
-  subl $3, %eax",
+addl $5, %eax\n\
+subl $3, %eax",
       answers: [
         { text: "2", correct: true },
         { text: "3", correct: false },
@@ -321,17 +321,17 @@ const questions = [
     },{
       question: "레지스터, 메모리와 코드가 다음과 같다. 1번 코드까지 실행했을 때 eax에 저장된 값은?",
       question2: "[Register]\n\
-  ebx = 0x4e8a40\n\
-  ========================\n\
-  [Memory]\n\
-  0x4e8a40 | 0xDEADBEEF\n\
-  0x4e8a48 | 0xC0FFEE12\n\
-  0x4e8a50 | 0xBEA7C0DE\n\
-  0x4b4a58 | 0xC0DEB00K\n\
-  ========================\n\
-  [Code]\n\
-  1: mov (%ebx), %eax\n\
-  2: lea 8(%ebx), %eax",
+ebx = 0x4e8a40\n\
+========================\n\
+[Memory]\n\
+0x4e8a40 | 0xDEADBEEF\n\
+0x4e8a48 | 0xC0FFEE12\n\
+0x4e8a50 | 0xBEA7C0DE\n\
+0x4b4a58 | 0xC0DEB00K\n\
+========================\n\
+[Code]\n\
+1: mov (%ebx), %eax\n\
+2: lea 8(%ebx), %eax",
       answers: [
         { text: "0xC0FFEE12", correct: true },
         { text: "0x4e8a48", correct: false },
@@ -341,17 +341,17 @@ const questions = [
     },{
       question: "레지스터, 메모리와 코드가 다음과 같다. 2번 코드까지 실행했을 때 eax에 저장된 값은?",
       question2: "[Register]\n\
-  ebx = 0x4e8a40\n\
-  ========================\n\
-  [Memory]\n\
-  0x4e8a40 | 0xDEADBEEF\n\
-  0x4e8a48 | 0xC0FFEE12\n\
-  0x4e8a50 | 0xBEA7C0DE\n\
-  0x4b4a58 | 0xC0DEB00K\n\
-  ========================\n\
-  [Code]\n\
-  1: mov 8(%ebx), %eax\n\
-  2: lea 8(%ebx), %eax",
+ebx = 0x4e8a40\n\
+========================\n\
+[Memory]\n\
+0x4e8a40 | 0xDEADBEEF\n\
+0x4e8a48 | 0xC0FFEE12\n\
+0x4e8a50 | 0xBEA7C0DE\n\
+0x4b4a58 | 0xC0DEB00K\n\
+========================\n\
+[Code]\n\
+1: mov 8(%ebx), %eax\n\
+2: lea 8(%ebx), %eax",
       answers: [
         { text: "0x4e8a48", correct: true },
         { text: "0xC0FFEE12", correct: false },
@@ -381,6 +381,7 @@ const questions = [
   let timeLeft = 360;
 
   function countdown() {
+    console.log("Countdown!!!!");
     var timerVar = setInterval(function() {
       if (timeLeft < 0) {
         clearInterval(timerVar);
@@ -398,6 +399,7 @@ const questions = [
   function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
+    timeLeft = 360;
     nextButton.innerHTML = "Next";
     countdown();
     showQuestion();
@@ -426,7 +428,6 @@ const questions = [
   }
   
   function resetState() {
-    timeLeft = 360;
     nextButton.style.display = "none";
     warpButton.style.display = "none";
     question2BoxElement.style.display = "block";
