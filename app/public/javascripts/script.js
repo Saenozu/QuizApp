@@ -367,7 +367,6 @@ const questions = [
   
   shuffle(questions);
   
-  const scoreElement = document.getElementById("score");
   const countdownElement = document.getElementById("countdown");
   const questionElement = document.getElementById("question");
   const question2BoxElement = document.getElementById("question2-box");
@@ -375,7 +374,7 @@ const questions = [
   const answerButtons = document.getElementById("answer-buttons");
   const nextButton = document.getElementById("next-btn");
   const warpButton = document.getElementById("warp-btn");
-  const maxQuestion = 1;
+  const maxQuestion = questions.length;
   
   let currentQuestionIndex = 0;
   let score = 0;
@@ -399,7 +398,6 @@ const questions = [
   function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
-    scoreElement.innerHTML = score;
     nextButton.innerHTML = "Next";
     countdown();
     showQuestion();
@@ -443,7 +441,6 @@ const questions = [
     if (isCorrect) {
       selectedBtn.classList.add("correct");
       score++;
-      scoreElement.innerHTML = score;
     } else {
       selectedBtn.classList.add("incorrect");
     }
